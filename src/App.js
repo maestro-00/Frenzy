@@ -23,6 +23,7 @@ const App = () => {
     const fetchChars = async () => {
 
       const result = await axios(`http://www.omdbapi.com/?s=${query}&page=${page}&apikey=c486b70d`); 
+      
       if(result.data.Response === "True") {
         setMovies(result.data.Search);
 
