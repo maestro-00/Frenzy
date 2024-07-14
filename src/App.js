@@ -4,6 +4,8 @@ import Header from './components/ui/Header';
 import axios from 'axios';
 import MovieGrid from './components/movies/MovieGrid';
 import Search from './components/ui/Search';
+import { Route, Router, Routes } from 'react-router-dom';
+import MovieDetail from './components/movies/MovieDetail';
 
 const App = () => {
   
@@ -26,10 +28,25 @@ const App = () => {
     fetchChars();
   },[query]);
   return (
-    <div className="container">
-      <Header/>
-      <Search getQuery={setQuery}/>
-      <MovieGrid movies={movies} loading={loading}/>
+    <div className="container"> 
+        <Header/>
+      <Routes>
+      <Route
+          path="/"
+          element={
+            <>
+              <Search getQuery={setQuery}/>
+              <MovieGrid movies={movies} loading={loading}/>
+            </>
+          }
+        /> 
+      <Route
+          path="/:movieId"
+          element={
+            <MovieDetail/>
+          }
+        /> 
+      </Routes>    
     </div>
   );
 }
