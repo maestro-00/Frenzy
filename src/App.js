@@ -60,6 +60,7 @@ const App = () => {
       
       {/* PaginationControls component to handle pagination */}
       <PaginationControls currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
+      {/* testing the branch issue */}
     </div>
   );
 }
