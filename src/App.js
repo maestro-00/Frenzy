@@ -58,9 +58,10 @@ const App = () => {
       <Search getQuery={setQuery}/>
       <MovieGrid movies={movies} loading={loading}/>
       
-      {/* PaginationControls component to handle pagination */}
-      <PaginationControls currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
-      {/* testing the branch issue */}
+      {/* Show PaginationControls only if there are results and more than 1 page */}
+      {movies.length > 0 && totalPages > 1 && (
+        <PaginationControls currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
+      )}
     </div>
   );
 }
