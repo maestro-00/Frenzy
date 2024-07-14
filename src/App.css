@@ -67,7 +67,8 @@ input[type='text'] {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 4rem 4rem;
+  margin-top: 2rem;
+  padding: 4rem 4rem;
 }
 
 .card {
