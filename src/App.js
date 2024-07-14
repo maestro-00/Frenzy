@@ -3,8 +3,10 @@ import './App.css';
 import Header from './components/ui/Header';
 import axios from 'axios';
 import MovieGrid from './components/movies/MovieGrid';
-import Search from './components/ui/Search';
-import PaginationControls from './components/Pagination/PaginationControls';
+import Search from './components/ui/Search'; 
+import { Route, Router, Routes } from 'react-router-dom';
+import MovieDetail from './components/movies/MovieDetail'; 
+import PaginationControls from './components/Pagination/PaginationControls'; 
 
 const App = () => {
   
@@ -52,16 +54,30 @@ const App = () => {
     }
   }
   
-  return (
-    <div className="container">
-      <Header/>
-      <Search getQuery={setQuery}/>
-      <MovieGrid movies={movies} loading={loading}/>
-      
-      {/* Show Pagination only if there are results and more than 1 page  */}
-      {movies.length > 0 && totalPages > 1 && (
-        <PaginationControls currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
-      )}
+  return ( 
+    <div className="container"> 
+        <Header/>
+      <Routes>
+      <Route
+          path="/"
+          element={
+            <>
+              <Search getQuery={setQuery}/>
+              <MovieGrid movies={movies} loading={loading}/>
+               {/* Show Pagination only if there are results and more than 1 page  */}
+              {movies.length > 0 && totalPages > 1 && (
+                <PaginationControls currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
+              )}
+            </>
+          }
+        /> 
+      <Route
+          path="/:movieId"
+          element={
+            <MovieDetail/>
+          }
+        /> 
+      </Routes>  
     </div>
   );
 }
