@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
   
     const fetchChars = async () => {
-      const result = await axios(`http://www.omdbapi.com/?s=${query}&apikey=c486b70d`); 
+      const result = await axios(`https://www.omdbapi.com/?s=${query}&apikey=c486b70d`); 
       if(result.data.Response === "True") {
         setMovies(result.data.Search);
       }else {
