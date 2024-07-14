@@ -22,6 +22,12 @@ a {
   padding: 0 20px;
 }
 
+ a {
+  color: #ece5e5
+}
+a:hover {
+  text-decoration: underline;
+}
 .btn {
   display: inline-block;
   color: #fff;
@@ -133,12 +139,6 @@ input[type='text'] {
   text-align: center;
 }
 
-.card li a {
-  color: #ece5e5
-}
-.card li a:hover {
-  text-decoration: underline;
-}
 
 @media (max-width: 800px) {
   .cards {
