@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./mostyle.css"
 
 const Search = ({ getQuery }) => {
   const [title, setTitle] = useState("");
@@ -31,7 +32,8 @@ const Search = ({ getQuery }) => {
           className="form-control"
           placeholder="Search for a movie"
         />
-        <input
+            <div className="searchStyle">
+            <input
           value={year}
           onChange={(e) => onChangeYear(e.target.value)}
           type="number"
@@ -48,7 +50,9 @@ const Search = ({ getQuery }) => {
           <option value="episode">Episode</option>
           <option value="game">Game</option>
         </select>
-      </form>
+  
+            </div>
+           </form>
     </section>
   );
 };
