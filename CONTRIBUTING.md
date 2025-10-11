@@ -45,7 +45,7 @@ We will then take care of the issue as soon as possible.
 ## I Want To Contribute
 To get started running the EventsMgr locally, follow these instructions for setting up your development environment.
 
-To contribute code, you should fork the https://github.com/Lukada-taiya/Frenzy repository and develop your fix in a branch other than master. Then open a pull request from your branch to Lukada-taiya/events-mgr/branches/main.
+To contribute code, you should fork the https://github.com/maestro-00/Frenzy repository and develop your fix in a branch other than master. Then open a pull request from your branch to maestro-00/events-mgr/branches/main.
 
 > ### Legal Notice 
 > When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
