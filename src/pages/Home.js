@@ -19,7 +19,6 @@ const Home = () => {
   const [hasMore, setHasMore] = useState(savedState?.hasMore ?? true);
   const [totalResults, setTotalResults] = useState(savedState?.totalResults || 0);
   const [filters, setFilters] = useState(savedState?.filters || { type: '', year: '' });
-  const [scrollPosition, setScrollPosition] = useState(savedState?.scrollPosition || 0);
   
   const observer = useRef();
   const lastMovieRef = useCallback(node => {
